@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Christ Banidje - Développeur Web & Data/IA. Portfolio professionnel présentant mes compétences en développement, analyse de données et machine learning.">
+    <title>Christ Banidje | Développeur Web & Data/IA</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="text-2xl font-bold text-slate-800 hover:text-blue-600 transition-colors">CB</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link text-slate-600 hover:text-blue-600 transition-colors">À propos</a>
+                    <a href="#skills" class="nav-link text-slate-600 hover:text-blue-600 transition-colors">Compétences</a>
+                    <a href="#projects" class="nav-link text-slate-600 hover:text-blue-600 transition-colors">Projets</a>
+                    <a href="#education" class="nav-link text-slate-600 hover:text-blue-600 transition-colors">Formation</a>
+                    <a href="#contact" class="nav-link text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-800">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-2">
+                <a href="#about" class="block px-4 py-2 text-slate-600 hover:bg-blue-50 rounded mobile-nav-link">À propos</a>
+                <a href="#skills" class="block px-4 py-2 text-slate-600 hover:bg-blue-50 rounded mobile-nav-link">Compétences</a>
+                <a href="#projects" class="block px-4 py-2 text-slate-600 hover:bg-blue-50 rounded mobile-nav-link">Projets</a>
+                <a href="#education" class="block px-4 py-2 text-slate-600 hover:bg-blue-50 rounded mobile-nav-link">Formation</a>
+                <a href="#contact" class="block px-4 py-2 text-slate-600 hover:bg-blue-50 rounded mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 min-h-screen flex items-center bg-gradient-to-br from-slate-50 to-blue-50">
+        <div class="max-w-6xl mx-auto w-full">
+            <div class="text-center">
+                <div class="mb-6 inline-block" data-aos="zoom-in">
+                    <div class="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-lg animate-float">
+                        CB
+                    </div>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold text-slate-800 mb-4" data-aos="fade-up">
+                    Christ Banidje
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-600 mb-6" data-aos="fade-up" data-aos-delay="100">
+                    Développeur Web & Data/IA
+                </p>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="200">
+                    Passionné de technologie, je suis orienté vers des solutions innovantes pour contribuer à l'évolution de l'Afrique
+                </p>
+                <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105 flex items-center space-x-2 shadow-lg">
+                        <i class="fas fa-envelope"></i>
+                        <span>Me contacter</span>
+                    </a>
+                    <a href="#projects" class="border-2 border-slate-300 text-slate-700 px-6 py-3 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all transform hover:scale-105 flex items-center space-x-2">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Voir mes projets</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-slate-800 mb-12 text-center" data-aos="fade-up">À propos</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        Développeur passionné avec une expertise en développement web, analyse de données et intelligence artificielle. 
+                        Je combine mes compétences techniques avec une vision stratégique pour créer des solutions innovantes.
+                    </p>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        Actuellement en formation à Epitech Benin, je me spécialise dans le développement de solutions Data/IA 
+                        tout en maintenant une solide base en développement full-stack.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold">Machine Learning</span>
+                        <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold">Deep Learning</span>
+                        <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold">Full Stack</span>
+                        <span class="bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-semibold">Data Analysis</span>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="stat-card bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl text-center transform hover:scale-105 transition-transform">
+                            <i class="fas fa-code text-4xl text-blue-600 mb-3"></i>
+                            <div class="text-3xl font-bold text-slate-800 mb-1">10+</div>
+                            <div class="text-slate-600 text-sm">Projets Web</div>
+                        </div>
+                        <div class="stat-card bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl text-center transform hover:scale-105 transition-transform">
+                            <i class="fas fa-database text-4xl text-purple-600 mb-3"></i>
+                            <div class="text-3xl font-bold text-slate-800 mb-1">5+</div>
+                            <div class="text-slate-600 text-sm">Projets Data</div>
+                        </div>
+                        <div class="stat-card bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl text-center transform hover:scale-105 transition-transform">
+                            <i class="fas fa-brain text-4xl text-green-600 mb-3"></i>
+                            <div class="text-3xl font-bold text-slate-800 mb-1">8+</div>
+                            <div class="text-slate-600 text-sm">Modèles ML/DL</div>
+                        </div>
+                        <div class="stat-card bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl text-center transform hover:scale-105 transition-transform">
+                            <i class="fas fa-trophy text-4xl text-orange-600 mb-3"></i>
+                            <div class="text-3xl font-bold text-slate-800 mb-1">3</div>
+                            <div class="text-slate-600 text-sm">Certifications</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-slate-800 mb-12 text-center" data-aos="fade-up">Compétences</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Développement Web -->
+                <div class="skill-card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-globe text-blue-600 text-4xl mr-4"></i>
+                        <h3 class="text-xl font-bold text-slate-800">Développement Web</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-slate-600">
+                            <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                            <span>HTML/CSS/JavaScript</span>
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                            <span>PHP, Python</span>
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                            <span>VueJS, Laravel, Symfony</span>
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                            <span>TailwindCSS, Bootstrap</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Data Analysis -->
+                <div class="skill-card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chart-line text-purple-600 text-4xl mr-4"></i>
+                        <h3 class="text-xl font-bold text-slate-800">Data Analysis</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-slate-600">
+                            <i class="fas fa-check-circle text-purple-600 mr-3"></i>
+                            <span>Pandas, Matplotlib</span>
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <i class="fas fa-check-circle text-purple-600 mr-3"></i>
+                            <span>PowerBI</span>
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <i class="fas fa-check-circle text-purple-600 mr-3"></i>
+                            <span>SQL, MySQL</span>
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <i class="fas fa-check-circle text-purple-600 mr-3"></i>
+                            <span>ETL & Data Processing</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Machine & Deep Learning -->
+                <div class="skill-card bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-brain text-green-600 text-4xl mr-4"></i>
+                        <h3 class="text-xl font-bold text-slate-800">Machine & Deep Learning</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-slate-600">
+                            <i class="fas fa-check-circle text-green-600 mr-3"></i>
+                            <span>Scikit-learn</span>
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <i class="fas fa-check-circle text-green-600 mr-3"></i>
+                            <span>TensorFlow, Keras</span>
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <i class="fas fa-check-circle text-green-600 mr-3"></i>
+                            <span>NLP & Computer Vision</span>
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <i class="fas fa-check-circle text-green-600 mr-3"></i>
+                            <span>Model Deployment</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Langues -->
+            <div class="mt-12 grid md:grid-cols-3 gap-6" data-aos="fade-up">
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <i class="fas fa-flag text-blue-600 text-3xl mb-3"></i>
+                    <h4 class="font-bold text-slate-800 mb-2">Français</h4>
+                    <p class="text-slate-600">Courant</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <i class="fas fa-flag text-red-600 text-3xl mb-3"></i>
+                    <h4 class="font-bold text-slate-800 mb-2">Anglais</h4>
+                    <p class="text-slate-600">Intermédiaire</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <i class="fas fa-flag text-yellow-600 text-3xl mb-3"></i>
+                    <h4 class="font-bold text-slate-800 mb-2">Espagnol</h4>
+                    <p class="text-slate-600">Courant</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-slate-800 mb-12 text-center" data-aos="fade-up">Projets</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12" data-aos="fade-up">
+                <button class="filter-btn active px-6 py-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors" data-filter="all">Tous</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-slate-200 text-slate-700 hover:bg-slate-300 transition-colors" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-slate-200 text-slate-700 hover:bg-slate-300 transition-colors" data-filter="dl">Deep Learning</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-slate-200 text-slate-700 hover:bg-slate-300 transition-colors" data-filter="web">Web</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-slate-200 text-slate-700 hover:bg-slate-300 transition-colors" data-filter="data">Data Analysis</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Sentiment Analysis -->
+                <div class="project-card" data-category="ml" data-aos="fade-up">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <div class="bg-gradient-to-br from-blue-500 to-purple-600 h-48 flex items-center justify-center">
+                            <i class="fas fa-comments text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-sm text-blue-600 font-semibold">Machine Learning</span>
+                            <h3 class="text-xl font-bold text-slate-800 mt-2 mb-3">Sentiment Analysis</h3>
+                            <p class="text-slate-600 mb-4">Extraction et analyse de sentiments de commentaires Reddit avec KAFKA pour détecter les sentiments positifs, négatifs ou neutres.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Python</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">KAFKA</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">NLP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fashion-MNIST -->
+                <div class="project-card" data-category="dl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <div class="bg-gradient-to-br from-purple-500 to-pink-600 h-48 flex items-center justify-center">
+                            <i class="fas fa-images text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-sm text-purple-600 font-semibold">Deep Learning</span>
+                            <h3 class="text-xl font-bold text-slate-800 mt-2 mb-3">Fashion-MNIST Classifier</h3>
+                            <p class="text-slate-600 mb-4">Modèle de classification d'images de vêtements utilisant TensorFlow et Keras sur la base de données Fashion-MNIST.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">TensorFlow</span>
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">Keras</span>
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">CNN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NLP Books -->
+                <div class="project-card" data-category="ml" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <div class="bg-gradient-to-br from-green-500 to-teal-600 h-48 flex items-center justify-center">
+                            <i class="fas fa-book text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-sm text-green-600 font-semibold">NLP</span>
+                            <h3 class="text-xl font-bold text-slate-800 mt-2 mb-3">Book Recommendation System</h3>
+                            <p class="text-slate-600 mb-4">Analyse de 52 livres du projet Gutenberg pour extraction de sujets et recommandations personnalisées.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">Python</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">NLP</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">Text Mining</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EDA -->
+                <div class="project-card" data-category="data" data-aos="fade-up">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <div class="bg-gradient-to-br from-orange-500 to-red-600 h-48 flex items-center justify-center">
+                            <i class="fas fa-chart-bar text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-sm text-orange-600 font-semibold">Data Analysis</span>
+                            <h3 class="text-xl font-bold text-slate-800 mt-2 mb-3">E-commerce Customer Analysis</h3>
+                            <p class="text-slate-600 mb-4">Analyse et prédiction des comportements d'achat clients avec PowerBI et Python pour visualisation et insights.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs">PowerBI</span>
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs">Pandas</span>
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs">EDA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YOWL -->
+                <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <div class="bg-gradient-to-br from-indigo-500 to-blue-600 h-48 flex items-center justify-center">
+                            <i class="fas fa-share-alt text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-sm text-indigo-600 font-semibold">Full Stack</span>
+                            <h3 class="text-xl font-bold text-slate-800 mt-2 mb-3">YOWL</h3>
+                            <p class="text-slate-600 mb-4">Réseau social pour partager des avis sur tout contenu internet avec API Laravel et interface VueJS moderne.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs">Laravel</span>
+                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs">VueJS</span>
+                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs">API REST</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Africafolio -->
+                <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <div class="bg-gradient-to-br from-yellow-500 to-orange-600 h-48 flex items-center justify-center">
+                            <i class="fas fa-briefcase text-white text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <span class="text-sm text-yellow-600 font-semibold">Web Development</span>
+                            <h3 class="text-xl font-bold text-slate-800 mt-2 mb-3">Africafolio</h3>
+                            <p class="text-slate-600 mb-4">Plateforme de création et gestion de portfolios pour professionnels africains avec intégration FEDAPAY.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs">PHP</span>
+                                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs">Bootstrap</span>
+                                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-slate-800 mb-12 text-center" data-aos="fade-up">Formation & Certifications</h2>
+            <div class="space-y-6">
+                <!-- Epitech -->
+                <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="fade-right">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-4 rounded-lg mr-6">
+                            <i class="fas fa-graduation-cap text-blue-600 text-3xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Certification en Développement Data/IA</h3>
+                            <p class="text-blue-600 font-semibold mb-2">Epitech Benin</p>
+                            <p class="text-slate-600 mb-3">Août 2025 - Présent</p>
+                            <p class="text-slate-600">Formation spécialisée en développement Data/IA incluant Machine Learning, Deep Learning, et développement web full-stack.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columbia+ -->
+                <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="fade-right">
+                    <div class="flex items-start">
+                        <div class="bg-green-100 p-4 rounded-lg mr-6">
+                            <i class="fas fa-certificate text-green-600 text-3xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Certification en Introduction à l'IA par Visualisation</h3>
+                            <p class="text-green-600 font-semibold mb-2">Columbia+</p>
+                            <p class="text-slate-600 mb-3">2025</p>
+                            <p class="text-slate-600">Certification en intelligence artificielle avec focus sur la visualisation de données et concepts IA.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Autres certifications -->
+                <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="fade-left">
+                    <div class="flex items-start">
+                        <div class="bg-orange-100 p-4 rounded-lg mr-6">
+                            <i class="fas fa-award text-orange-600 text-3xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Attestations en Développement Web</h3>
+                            <p class="text-orange-600 font-semibold mb-2">Centre de Formation professionnelle Savoir-Faire</p>
+                            <p class="text-slate-600">Attestations en création de sites web et développement full-stack (PHP, JavaScript, frameworks modernes).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Licence -->
+                <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="fade-left">
+                    <div class="flex items-start">
+                        <div class="bg-purple-100 p-4 rounded-lg mr-6">
+                            <i class="fas fa-university text-purple-600 text-3xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Licence de Droit Public</h3>
+                            <p class="text-purple-600 font-semibold mb-2">FADESP</p>
+                            <p class="text-slate-600 mb-3">2025</p>
+                            <p class="text-slate-600">Formation juridique complémentaire apportant une compréhension approfondie du cadre légal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-6 text-center" data-aos="fade-up">Travaillons Ensemble</h2>
+            <p class="text-xl mb-12 text-center opacity-90" data-aos="fade-up" data-aos-delay="100">
+                Vous avez un projet Data/IA ou Web ? Discutons-en !
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <!-- Email -->
+                <a href="mailto:christ.banidje@epitech.eu" class="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all transform hover:scale-105" data-aos="fade-right">
+                    <div class="flex items-center">
+                        <div class="bg-white/20 p-4 rounded-lg mr-4">
+                            <i class="fas fa-envelope text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-1">Email</h3>
+                            <p class="opacity-90">christ.banidje@epitech.eu</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Phone -->
+                <a href="tel:+22901693495" class="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all transform hover:scale-105" data-aos="fade-left">
+                    <div class="flex items-center">
+                        <div class="bg-white/20 p-4 rounded-lg mr-4">
+                            <i class="fas fa-phone text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-1">Téléphone</h3>
+                            <p class="opacity-90">+229 01 69 34 95 02</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex justify-center space-x-6" data-aos="fade-up" data-aos-delay="200">
+                <a href="#" target="_blank" class="bg-white/20 backdrop-blur-sm p-4 rounded-full hover:bg-white/30 transition-all transform hover:scale-110" title="GitHub">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="#" target="_blank" class="bg-white/20 backdrop-blur-sm p-4 rounded-full hover:bg-white/30 transition-all transform hover:scale-110" title="LinkedIn">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="#" target="_blank" class="bg-white/20 backdrop-blur-sm p-4 rounded-full hover:bg-white/30 transition-all transform hover:scale-110" title="Twitter">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+            </div>
+
+            <!-- Contact Form -->
+            <form id="contact-form" class="mt-12 bg-white/10 backdrop-blur-sm p-8 rounded-xl" data-aos="fade-up">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block mb-2 font-semibold">Nom</label>
+                        <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 placeholder-white/60 focus:outline-none focus:border-white transition-colors">
+                    </div>
+                    <div>
+                        <label class="block mb-2 font-semibold">Email</label>
+                        <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 placeholder-white/60 focus:outline-none focus:border-white transition-colors">
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block mb-2 font-semibold">Sujet</label>
+                    <input type="text" name="subject" required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 placeholder-white/60 focus:outline-none focus:border-white transition-colors">
+                </div>
+                <div class="mb-6">
+                    <label class="block mb-2 font-semibold">Message</label>
+                    <textarea name="message" rows="5" required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 placeholder-white/60 focus:outline-none focus:border-white transition-colors resize-none"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-white text-blue-600 font-bold py-4 rounded-lg hover:bg-blue-50 transition-colors transform hover:scale-105">
+                    Envoyer le message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Christ Banidje</h3>
+                    <p class="mb-4">Développeur Web & Data/IA passionné par l'innovation technologique en Afrique.</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-white transition-colors">À propos</a></li>
+                        <li><a href="#skills" class="hover:text-white transition-colors">Compétences</a></li>
+                        <li><a href="#projects" class="hover:text-white transition-colors">Projets</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Centres d'intérêt</h3>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-futbol mr-2"></i>Sports (Football, Basketball, MMA)</li>
+                        <li><i class="fas fa-laptop-code mr-2"></i>Technologie</li>
+                        <li><i class="fas fa-gamepad mr-2"></i>Jeux vidéos</li>
+                        <li><i class="fas fa-plane mr-2"></i>Voyages</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 pt-8 text-center">
+                <p>© 2025 Christ Banidje. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all transform hover:scale-110 opacity-0 pointer-events-none">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- JavaScript personnalisé -->
+    <script src="script.js"></script>
+</body>
+</html>>
