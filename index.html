@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Christ Banidje - Développeur Web & Data/IA. Portfolio professionnel présentant mes compétences et projets.">
+    <meta name="description" content="Christ Banidje - Développeur Fullstack & Data Scientist à Epitech Bénin. Découvrez mes projets en IA et développement web.">
     <meta name="keywords" content="Développeur Web, Data Scientist, Bénin, Portfolio, AI, Machine Learning">
     <meta name="author" content="Christ Banidje">
 
@@ -52,6 +52,10 @@
                 Formation
                 <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
             </a>
+            <button id="theme-toggle" class="p-2 ml-4 text-slate-500 hover:text-blue-600 focus:outline-none transition-colors">
+                <i id="theme-toggle-dark-icon" class="fas fa-moon text-xl hidden"></i>
+                <i id="theme-toggle-light-icon" class="fas fa-sun text-xl hidden"></i>
+            </button>
             <a href="#contact" class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all transform hover:scale-105 shadow-md">
                 Contact
             </a>
@@ -72,36 +76,78 @@
     </div>
 </nav>
 
-<section id="home" class="pt-32 pb-20 px-4 min-h-screen flex items-center bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
-    <div class="absolute top-20 left-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-    <div class="absolute top-20 right-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+<section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-slate-50 dark:bg-slate-950 transition-colors duration-500">
 
-    <div class="max-w-6xl mx-auto w-full relative z-10">
-        <div class="text-center">
-            <div class="mb-8 inline-block" data-aos="zoom-in">
-                <div class="w-40 h-40 mx-auto bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white text-5xl font-bold shadow-xl animate-float border-4 border-white ring-4 ring-blue-50">
-                    CB
+    <div class="absolute inset-0 z-0">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 dark:bg-blue-600/10 rounded-full blur-3xl animate-blob"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-400/20 dark:bg-purple-600/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] dark:opacity-[0.05]"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 w-full relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+            <div class="text-center lg:text-left" data-aos="fade-right">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-bold mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                    </span>
+                    <span>Disponible pour de nouveaux projets</span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
+                    Christ <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500">Banidje</span>
+                </h1>
+
+                <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-8 font-medium">
+                    Expert en <span class="text-slate-900 dark:text-white underline decoration-blue-500 decoration-2">Développement Web</span> & <span class="text-slate-900 dark:text-white underline decoration-purple-500 decoration-2">Data Science</span>.
+                </p>
+
+                <p class="text-lg text-slate-500 dark:text-slate-500 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Je conçois des architectures web robustes et j'exploite la puissance de l'IA pour transformer vos données en décisions stratégiques.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#contact" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold shadow-lg shadow-blue-500/20 transition-all transform hover:-translate-y-1 flex items-center justify-center">
+                        Démarrer un projet <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="christ_banidje_developpeur_dataia.pdf" download class="px-8 py-4 bg-white dark:bg-slate-800 text-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 rounded-xl font-bold hover:bg-slate-50 dark:hover:bg-slate-700 transition-all transform hover:-translate-y-1 flex items-center justify-center">
+                        <i class="fas fa-download mr-2"></i> Mon CV
+                    </a>
                 </div>
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold text-slate-800 mb-6 tracking-tight" data-aos="fade-up">
-                Christ <span class="text-blue-600">Banidje</span>
-            </h1>
-            <p class="text-xl md:text-3xl text-slate-600 font-light mb-8" data-aos="fade-up" data-aos-delay="100">
-                Développeur Web & <span class="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">Data Scientist</span>
-            </p>
-            <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                Je transforme les données complexes en solutions intelligentes et je conçois des applications web performantes pour l'Afrique de demain.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="300">
-                <a href="#contact" class="group bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/30 flex items-center justify-center space-x-2">
-                    <span>Me contacter</span>
-                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                </a>
-                <a href="#projects" class="group bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-full hover:border-blue-600 hover:text-blue-600 transition-all shadow-sm hover:shadow-md flex items-center justify-center space-x-2">
-                    <i class="fas fa-layer-group"></i>
-                    <span>Voir mon portfolio</span>
-                </a>
+
+            <div class="hidden lg:block relative" data-aos="zoom-in" data-aos-delay="200">
+                <div class="relative z-10 bg-gradient-to-br from-blue-600 to-indigo-700 p-1 rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <div class="bg-slate-900 rounded-[22px] overflow-hidden">
+                        <div class="flex items-center space-x-2 px-4 py-3 bg-slate-800">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            <div class="text-xs text-slate-400 font-mono ml-4">data_analysis.py</div>
+                        </div>
+                        <div class="p-6 font-mono text-sm">
+                            <p class="text-purple-400">import <span class="text-white">tensorflow</span> as <span class="text-white">tf</span></p>
+                            <p class="text-blue-400">class <span class="text-yellow-300">Predictor</span>:</p>
+                            <p class="text-slate-400 ml-4">def __init__(self):</p>
+                            <p class="text-slate-400 ml-8 text-blue-300">self.model = tf.keras.Sequential()</p>
+                            <p class="text-green-400 mt-4"># Optimizing for Africa's future...</p>
+                            <p class="text-white mt-2">model.train(data_set)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl flex items-center space-x-3 animate-bounce">
+                    <div class="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-green-600">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-500">Projets livrés</p>
+                        <p class="font-bold dark:text-white">100% Satisfaction</p>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
 </section>
@@ -113,31 +159,61 @@
             <div class="w-20 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
         </h2>
         <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div data-aos="fade-right">
-                <h3 class="text-2xl font-bold text-slate-800 mb-4">La technologie au service de l'impact</h3>
-                <p class="text-lg text-slate-600 mb-6 leading-relaxed">
-                    Passionné par l'intersection entre le développement web et l'intelligence artificielle, je construis des ponts entre les données brutes et les interfaces utilisateurs intuitives.
-                </p>
-                <p class="text-lg text-slate-600 mb-6 leading-relaxed">
-                    Actuellement en formation avancée à <strong class="text-blue-600">Epitech Bénin</strong>, je combine rigueur académique et projets concrets pour maîtriser les défis technologiques modernes.
+<!--            <div data-aos="fade-right">-->
+<!--                <h3 class="text-2xl font-bold text-slate-800 mb-4">La technologie au service de l'impact</h3>-->
+<!--                <p class="text-lg text-slate-600 mb-6 leading-relaxed">-->
+<!--                    Passionné par l'intersection entre le développement web et l'intelligence artificielle, je construis des ponts entre les données brutes et les interfaces utilisateurs intuitives.-->
+<!--                </p>-->
+<!--                <p class="text-lg text-slate-600 mb-6 leading-relaxed">-->
+<!--                    Actuellement en formation avancée à <strong class="text-blue-600">Epitech Bénin</strong>, je combine rigueur académique et projets concrets pour maîtriser les défis technologiques modernes.-->
+<!--                </p>-->
+
+<!--                <div class="grid grid-cols-2 gap-4 mt-8">-->
+<!--                    <div class="flex items-center space-x-2">-->
+<!--                        <i class="fas fa-check-circle text-green-500"></i>-->
+<!--                        <span class="font-medium">Problem Solver</span>-->
+<!--                    </div>-->
+<!--                    <div class="flex items-center space-x-2">-->
+<!--                        <i class="fas fa-check-circle text-green-500"></i>-->
+<!--                        <span class="font-medium">Travail d'équipe</span>-->
+<!--                    </div>-->
+<!--                    <div class="flex items-center space-x-2">-->
+<!--                        <i class="fas fa-check-circle text-green-500"></i>-->
+<!--                        <span class="font-medium">Autodidacte</span>-->
+<!--                    </div>-->
+<!--                    <div class="flex items-center space-x-2">-->
+<!--                        <i class="fas fa-check-circle text-green-500"></i>-->
+<!--                        <span class="font-medium">Curieux</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="space-y-6" data-aos="fade-right">
+                <h3 class="text-2xl font-bold text-slate-800 dark:text-white flex items-center">
+                    <span class="w-8 h-1 bg-blue-600 mr-3 rounded-full"></span>
+                    Mon Profil
+                </h3>
+
+                <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed italic border-l-4 border-blue-600 pl-4 bg-blue-50/50 dark:bg-blue-900/10 py-4 rounded-r-lg">
+                    "Développeur Web & Data / IA passionné par la technologie et orienté solutions, avec une forte spécialisation en analyse de données, machine learning et deep learning."
                 </p>
 
-                <div class="grid grid-cols-2 gap-4 mt-8">
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-check-circle text-green-500"></i>
-                        <span class="font-medium">Problem Solver</span>
+                <div class="grid gap-4">
+                    <div class="flex items-start space-x-3">
+                        <div class="mt-1 bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg text-blue-600">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400">
+                            J’ai mené plusieurs projets académiques concrets allant de la classification de données et d’images à la conception d’API et d’applications web complètes.
+                        </p>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-check-circle text-green-500"></i>
-                        <span class="font-medium">Travail d'équipe</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-check-circle text-green-500"></i>
-                        <span class="font-medium">Autodidacte</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-check-circle text-green-500"></i>
-                        <span class="font-medium">Curieux</span>
+
+                    <div class="flex items-start space-x-3">
+                        <div class="mt-1 bg-purple-100 dark:bg-purple-900/30 p-2 rounded-lg text-purple-600">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400">
+                            Mon objectif est de mettre l’IA et le développement logiciel au service de l’innovation et du développement numérique en Afrique.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -169,6 +245,18 @@
         </div>
     </div>
 </section>
+
+<!--<section class="py-12 bg-white border-y border-slate-100">-->
+<!--    <div class="max-w-6xl mx-auto px-4">-->
+<!--        <p class="text-center text-slate-400 text-sm font-semibold uppercase tracking-widest mb-8">Ils me font confiance / Mon parcours</p>-->
+<!--        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">-->
+<!--            <img src="logo-epitech.png" alt="Epitech" class="h-10 md:h-12 object-contain">-->
+<!--            <img src="logo-columbia.png" alt="Columbia University" class="h-10 md:h-12 object-contain">-->
+<!--            <img src="logo-uac.png" alt="UAC" class="h-10 md:h-12 object-contain">-->
+<!--            <div class="text-2xl font-bold text-slate-300">Savoir-Faire</div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 
 <section id="skills" class="py-24 px-4 bg-slate-50">
     <div class="max-w-6xl mx-auto">
@@ -490,10 +578,18 @@
                     <a href="https://www.linkedin.com/in/ay%C3%A9y%C3%A8mi-banidje-751474334/" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all transform hover:scale-110">
                         <i class="fab fa-linkedin-in text-xl"></i>
                     </a>
+                    <a href="#" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all transform hover:scale-110">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
                 </div>
             </div>
 
-            <form id="contact-form" class="md:w-2/3 bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/10 shadow-2xl" data-aos="fade-left">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="md:w-2/3 bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/10 shadow-2xl" data-aos="fade-left">
+
+                <input type="hidden" name="access_key" value="3da30044-a12a-45ac-bc4d-3fd02e6ef8f5">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <input type="hidden" name="from_name" value="Portfolio - Christ Banidje">
+
                 <div class="grid md:grid-cols-2 gap-4 mb-4">
                     <div>
                         <label class="block mb-2 text-sm text-blue-200">Nom</label>
@@ -512,12 +608,14 @@
                     <label class="block mb-2 text-sm text-blue-200">Message</label>
                     <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:bg-white/10 focus:border-blue-400 transition-all resize-none"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-all transform hover:scale-[1.02] shadow-lg flex justify-center items-center">
+
+                <button type="submit" id="submit-btn" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-all transform hover:scale-[1.02] shadow-lg flex justify-center items-center">
                     <span id="btn-text">Envoyer le message</span>
                     <i id="btn-icon" class="fas fa-paper-plane ml-2"></i>
                     <div id="btn-loader" class="hidden w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin ml-2"></div>
                 </button>
-                <div id="form-status" class="mt-4 text-center text-sm font-medium hidden"></div>
+
+                <div id="form-status" class="mt-4 text-center text-sm font-medium hidden p-3 rounded-lg"></div>
             </form>
         </div>
     </div>
@@ -560,9 +658,59 @@
     </div>
 </footer>
 
+<div class="fixed left-6 bottom-0 hidden lg:block z-40" data-aos="fade-up" data-aos-delay="1000">
+    <div class="flex flex-col items-center space-y-6 after:content-[''] after:w-[1px] after:h-24 after:bg-slate-300 after:mt-6">
+        <a href="https://github.com/banloco" target="_blank" class="text-slate-400 hover:text-blue-600 hover:-translate-y-1 transition-all">
+            <i class="fab fa-github text-xl"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ay%C3%A9y%C3%A8mi-banidje-751474334/" target="_blank" class="text-slate-400 hover:text-blue-600 hover:-translate-y-1 transition-all">
+            <i class="fab fa-linkedin-in text-xl"></i>
+        </a>
+        <a href="mailto:christ.banidje@epitech.eu" class="text-slate-400 hover:text-blue-600 hover:-translate-y-1 transition-all">
+            <i class="fas fa-envelope text-xl"></i>
+        </a>
+    </div>
+</div>
+
 <button id="scroll-top" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-700 transition-all transform hover:scale-110 opacity-0 invisible translate-y-10 z-50 flex items-center justify-center">
     <i class="fas fa-arrow-up"></i>
 </button>
+
+<div id="project-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+    <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
+
+    <div class="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl transition-all transform scale-95 opacity-0 duration-300" id="modal-content">
+        <button id="close-modal" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 z-10 p-2">
+            <i class="fas fa-times text-2xl"></i>
+        </button>
+
+        <div class="grid md:grid-cols-2">
+            <div id="modal-img-container" class="h-64 md:h-auto bg-slate-200">
+                <img id="modal-image" src="" alt="" class="w-full h-full object-cover">
+            </div>
+
+            <div class="p-8">
+                <span id="modal-badge" class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2 block"></span>
+                <h3 id="modal-title" class="text-3xl font-bold text-slate-800 mb-4"></h3>
+                <div class="prose prose-slate mb-6">
+                    <p id="modal-description" class="text-slate-600 leading-relaxed"></p>
+                </div>
+
+                <h4 class="font-bold text-slate-800 mb-2 italic">Stack Technique :</h4>
+                <div id="modal-tags" class="flex flex-wrap gap-2 mb-8"></div>
+
+                <div class="flex gap-4">
+                    <a id="modal-link-github" href="#" target="_blank" class="flex-1 bg-slate-800 text-white text-center py-3 rounded-xl font-bold hover:bg-slate-700 transition-colors">
+                        <i class="fab fa-github mr-2"></i> Code Source
+                    </a>
+                    <a id="modal-link-demo" href="#" target="_blank" class="flex-1 bg-blue-600 text-white text-center py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors">
+                        <i class="fas fa-external-link-alt mr-2"></i> Démo Live
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>

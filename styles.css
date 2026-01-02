@@ -79,3 +79,64 @@
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* Animation subtile pour les cartes de compétences */
+#skills .bg-white {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#skills .bg-white:hover {
+    transform: translateY(-10px);
+    border-color: rgba(37, 99, 235, 0.2);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Animation de la barre de progression au survol de la carte */
+#skills .bg-white:hover .h-full {
+    filter: brightness(1.2);
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+}
+
+.project-card {
+    cursor: pointer;
+}
+
+/* Couleurs globales du mode sombre */
+.dark body {
+    background-color: #0f172a; /* slate-900 */
+    color: #f1f5f9; /* slate-100 */
+}
+
+.dark #navbar {
+    background-color: rgba(15, 23, 42, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .bg-white {
+    background-color: #1e293b; /* slate-800 */
+    color: #f1f5f9;
+}
+
+.dark .text-slate-600, .dark .text-slate-500 {
+    color: #94a3b8; /* slate-400 */
+}
+
+.dark .bg-slate-50 {
+    background-color: #0f172a;
+}
+
+/* Modifie tes cartes de projets pour le mode sombre */
+.dark .project-card .bg-white {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Animation du point "Disponible" */
+@keyframes ping {
+    75%, 100% { transform: scale(2); opacity: 0; }
+}
+
+/* Grille de fond subtile pour le Hero */
+.dark #home {
+    background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+    background-size: 40px 40px;
+}

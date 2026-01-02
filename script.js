@@ -169,3 +169,155 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000);
     });
 });
+
+// Données des projets (À compléter avec tes vrais textes)
+const projectDetails = {
+    "Sentiment Analysis (Kafka)": {
+        description: "Ce projet utilise Apache Kafka pour streamer des données Reddit en temps réel. Un modèle de NLP (Natural Language Processing) analyse le sentiment des commentaires pour détecter les tendances d'opinion sur des films. Idéal pour le marketing prédictif.",
+        github: "https://github.com/banloco/sentiment-kafka",
+        demo: "#",
+        image: "img/project1.jpg" // Assure-toi d'avoir ces images
+    },
+    "Fashion-MNIST Classifier": {
+        description: "Développement d'un réseau de neurones convolutif (CNN) capable de classifier 10 catégories d'articles de mode. Précision atteinte : 94%. Utilisation de data augmentation pour améliorer la robustesse du modèle.",
+        github: "https://github.com/banloco/fashion-mnist",
+        demo: "#",
+        image: "img/project2.jpg"
+    }
+    // Ajoute les autres projets ici...
+};
+
+const modal = document.getElementById('project-modal');
+const modalContent = document.getElementById('modal-content');
+const closeBtn = document.getElementById('close-modal');
+
+// Ouvrir le modal
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const title = card.querySelector('h3').innerText;
+        const details = projectDetails[title];
+
+        if (details) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-description').innerText = details.description;
+            document.getElementById('modal-badge').innerText = card.querySelector('span').innerText;
+            document.getElementById('modal-image').src = card.querySelector('.h-52 i') ? '' : card.querySelector('img').src;
+            document.getElementById('modal-link-github').href = details.github;
+            document.getElementById('modal-link-demo').href = details.demo;
+
+            // Copier les badges (tags)
+            const tags = card.querySelector('.flex-wrap').innerHTML;
+            document.getElementById('modal-tags').innerHTML = tags;
+
+            // Afficher avec animation
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+            }, 10);
+        }
+    });
+});
+
+// Fermer le modal
+const closeModal = () => {
+    modalContent.classList.add('scale-95', 'opacity-0');
+    setTimeout(() => {
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+    }, 300);
+};
+
+closeBtn.addEventListener('click', closeModal);
+modal.addEventListener('click', (e) => { if(e.target === modal.firstElementChild) closeModal(); });
+
+const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+const themeToggleBtn = document.getElementById('theme-toggle');
+
+// Vérifier les préférences au chargement
+if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+    themeToggleLightIcon.classList.remove('hidden');
+} else {
+    document.documentElement.classList.remove('dark');
+    themeToggleDarkIcon.classList.remove('hidden');
+}
+
+themeToggleBtn.addEventListener('click', function() {
+    // Basculer les icônes
+    themeToggleDarkIcon.classList.toggle('hidden');
+    themeToggleLightIcon.classList.toggle('hidden');
+
+    // Basculer le mode
+    if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+    } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+    }
+});
+
+const form = document.getElementById('contact-form');
+const result = document.getElementById('result');
+
+const contactForm = document.getElementById('contact-form');
+const btnText = document.getElementById('btn-text');
+const btnIcon = document.getElementById('btn-icon');
+const btnLoader = document.getElementById('btn-loader');
+const formStatus = document.getElementById('form-status');
+
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // État de chargement
+    btnText.textContent = "Envoi en cours...";
+    btnIcon.classList.add('hidden');
+    btnLoader.classList.remove('hidden');
+    contactForm.style.pointerEvents = "none"; // Empêcher le double clic
+
+    const formData = new FormData(contactForm);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: json
+    })
+        .then(async (response) => {
+            let res = await response.json();
+            formStatus.classList.remove('hidden');
+
+            if (response.status == 200) {
+                formStatus.classList.add('bg-green-500/20', 'text-green-200');
+                formStatus.innerHTML = "✓ Message envoyé avec succès !";
+                contactForm.reset();
+            } else {
+                formStatus.classList.add('bg-red-500/20', 'text-red-200');
+                formStatus.innerHTML = "Erreur : " + res.message;
+            }
+        })
+        .catch(error => {
+            formStatus.classList.remove('hidden');
+            formStatus.classList.add('bg-red-500/20', 'text-red-200');
+            formStatus.innerHTML = "Un problème est survenu. Réessayez plus tard.";
+        })
+        .finally(() => {
+            // Rétablir le bouton
+            btnText.textContent = "Envoyer le message";
+            btnIcon.classList.remove('hidden');
+            btnLoader.classList.add('hidden');
+            contactForm.style.pointerEvents = "auto";
+
+            // Cacher le message de statut après 5 secondes
+            setTimeout(() => {
+                formStatus.classList.add('hidden');
+                formStatus.classList.remove('bg-green-500/20', 'text-green-200', 'bg-red-500/20', 'text-red-200');
+            }, 5000);
+        });
+});
