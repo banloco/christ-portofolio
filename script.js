@@ -174,17 +174,19 @@ document.addEventListener('DOMContentLoaded', () => {
 const projectDetails = {
     "Sentiment Analysis (Kafka)": {
         description: "Ce projet utilise Apache Kafka pour streamer des données Reddit en temps réel. Un modèle de NLP (Natural Language Processing) analyse le sentiment des commentaires pour détecter les tendances d'opinion sur des films. Idéal pour le marketing prédictif.",
-        github: "https://github.com/banloco/sentiment-kafka",
         demo: "#",
-        image: "img/project1.jpg" // Assure-toi d'avoir ces images
+        image: "img/project1.jpg"
     },
     "Fashion-MNIST Classifier": {
         description: "Développement d'un réseau de neurones convolutif (CNN) capable de classifier 10 catégories d'articles de mode. Précision atteinte : 94%. Utilisation de data augmentation pour améliorer la robustesse du modèle.",
-        github: "https://github.com/banloco/fashion-mnist",
         demo: "#",
         image: "img/project2.jpg"
+    },
+    "YOWL Network": {
+        description: "Ce projet regroupe une communaute YOWL, ou ses membres se partagent des avis sur n'importe que element sur internet.",
+        demo: "https://yowl-frontend-v1.vercel.app/",
+        image: "images/yowl1.jpg"
     }
-    // Ajoute les autres projets ici...
 };
 
 const modal = document.getElementById('project-modal');
@@ -202,7 +204,7 @@ document.querySelectorAll('.project-card').forEach(card => {
             document.getElementById('modal-description').innerText = details.description;
             document.getElementById('modal-badge').innerText = card.querySelector('span').innerText;
             document.getElementById('modal-image').src = card.querySelector('.h-52 i') ? '' : card.querySelector('img').src;
-            document.getElementById('modal-link-github').href = details.github;
+            // document.getElementById('modal-link-github').href = details.github;
             document.getElementById('modal-link-demo').href = details.demo;
 
             // Copier les badges (tags)
